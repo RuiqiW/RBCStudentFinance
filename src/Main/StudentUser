@@ -11,7 +11,6 @@ class StudentUser{
     private String name;
     private String email;
     private String password;
-    private ArrayList<SchoolYear> years;
     private ArrayList<Semester> workSemesters = new ArrayList<>();
     private ArrayList<Semester> studySemesters = new ArrayList<>();
 
@@ -31,9 +30,6 @@ class StudentUser{
         return email;
     }
 
-    void addYear(SchoolYear year){
-        years.add(year);
-    }
 
     void addSemester(Semester semester){
         if(semester.isStudy()){

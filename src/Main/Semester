@@ -5,6 +5,7 @@ import java.util.Date;
 public class Semester {
     Date startDate;
     Date endDate;
+    int schoolYear;
     boolean study;
     ArrayList<Float> income;
     ArrayList<Float> housing;
