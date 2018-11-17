@@ -1,0 +1,52 @@
+import java.io.Serializable;
+import java.util.ArrayList;
+
+
+/**
+ * Student User information.
+ */
+class StudentUser{
+    static ArrayList<StudentUser> users;
+
+    private String name;
+    private String email;
+    private String password;
+    private ArrayList<SchoolYear> years;
+    private ArrayList<Semester> workSemesters = new ArrayList<>();
+    private ArrayList<Semester> studySemesters = new ArrayList<>();
+
+
+    StudentUser(String name, String email, String password) {
+        this.name = name;
+        this.email = email;
+        this.password = password;
+    }
+
+
+    String getName() {
+        return name;
+    }
+
+    String getEmail() {
+        return email;
+    }
+
+    void addYear(SchoolYear year){
+        years.add(year);
+    }
+
+    void addSemester(Semester semester){
+        if(semester.isStudy()){
+            studySemesters.add(semester);
+        }else{
+            workSemesters.add(semester);
+        }
+
+    }
+
+
+    @Override
+    public String toString() {
+        return String.format("Name: %s%nEmail: %s%n", getName(), email);
+    }
+}

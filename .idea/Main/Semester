@@ -1,0 +1,24 @@
+import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.Date;
+
+public class Semester {
+    Date startDate;
+    Date endDate;
+    boolean study;
+    ArrayList<Float> income;
+    ArrayList<Float> housing;
+    ArrayList<Float> transportation;
+    ArrayList<Float> food;
+
+    Semester(Date startDate, Date endDate, boolean study) {
+        this.startDate = startDate;
+        this.endDate = endDate;
+        this.study = study;
+    }
+
+    boolean isStudy(){
+        return study;
+    }
+
+}
